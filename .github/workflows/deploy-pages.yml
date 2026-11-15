@@ -1,4 +1,4 @@
-name: Deploy ZAYRO to GitHub Pages
+name: Deploy BLACKNESS to GitHub Pages
 
 on:
   push:
@@ -29,6 +29,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+          name: blackness-pages
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: blackness-pages
